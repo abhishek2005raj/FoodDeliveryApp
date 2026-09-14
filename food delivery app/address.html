@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress | Delivery Address</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            FoodExpress
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+
+        <div class="icons">
+            <span id="welcomeUser" class="welcome-user"></span>
+            <a href="login.html" id="authButton">
+                <button>Login</button>
+            </a>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <div class="login-box" style="width: 440px;">
+            <h2>Delivery Address 📍</h2>
+
+            <input type="text" id="name" placeholder="Full Name">
+            <input type="text" id="mobile" placeholder="Mobile Number (10 digits)">
+            <input type="text" id="house" placeholder="House No / Flat / Building">
+            <input type="text" id="street" placeholder="Street / Area / Landmark">
+            <input type="text" id="city" placeholder="City">
+            <input type="text" id="state" placeholder="State">
+            <input type="text" id="pincode" placeholder="Pincode (6 digits)">
+
+            <button type="button" id="currentLocation" style="background: #28a745; margin-bottom: 10px;">
+                📍 Use Current Location
+            </button>
+            <button id="saveAddress">
+                Continue to Payment
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 FoodExpress | Designed by Abhishek Raj</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="address.js"></script>
+    <script src="auth-ui.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FoodExpress | Delicious Food Delivered</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            FoodExpress
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Offers</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+
+            <a href="menu.html" style="color: inherit;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
+            <a href="cart.html" style="color: inherit; text-decoration: none;">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+
+            <span id="welcomeUser" class="welcome-user"></span>
+            <a href="login.html" id="authButton">
+                <button>Login</button>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Delicious Food <br>
+                Delivered To Your Door
+            </h1>
+
+            <p>
+                Order your favorite meals from the best restaurants near you.
+            </p>
+
+            <button onclick="window.location.href='menu.html'">
+                Order Now
+            </button>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700"
+                alt="Pizza">
+
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <h2>Popular Categories</h2>
+
+        <div class="category-container">
+
+            <div class="card" onclick="window.location.href='menu.html'">
+                🍕
+                <h3>Pizza</h3>
+            </div>
+
+            <div class="card" onclick="window.location.href='menu.html'">
+                🍔
+                <h3>Burger</h3>
+            </div>
+
+            <div class="card" onclick="window.location.href='menu.html'">
+                🍗
+                <h3>Chicken</h3>
+            </div>
+
+            <div class="card" onclick="window.location.href='menu.html'">
+                🥤
+                <h3>Drinks</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 FoodExpress | Designed by Abhishek Raj</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="auth-ui.js"></script>
+    <script>
+        // Sync cart count on home page
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const count = document.getElementById("cart-count");
+        if (count) {
+            count.textContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+        }
+    </script>
+
+</body>
+
+</html>

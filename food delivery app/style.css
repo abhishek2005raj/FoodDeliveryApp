@@ -1,0 +1,748 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fa;
+    color:#333;
+}
+
+/* ==========================
+        Header
+========================== */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#ff6b00;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff6b00;
+}
+
+.icons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.icons i{
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.icons i:hover{
+    color:#ff6b00;
+}
+
+.icons button{
+    border:none;
+    background:#ff6b00;
+    color:#fff;
+    padding:10px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.icons button:hover{
+    background:#ff4500;
+}
+
+/* ==========================
+      Hero Section
+========================== */
+
+.hero{
+    margin-top:90px;
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px 8%;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:58px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    color:#666;
+    margin-bottom:30px;
+    max-width:500px;
+}
+
+.hero-text button{
+    background:#ff6b00;
+    color:#fff;
+    border:none;
+    padding:15px 40px;
+    border-radius:35px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.hero-text button:hover{
+    background:#ff4500;
+    transform:translateY(-3px);
+}
+
+.hero-image{
+    flex:1;
+    text-align:center;
+}
+
+.hero-image img{
+    width:85%;
+    max-width:550px;
+    border-radius:50%;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+/* ==========================
+   Categories Section
+========================== */
+
+.categories{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.categories h2{
+    font-size:38px;
+    margin-bottom:50px;
+    color:#222;
+}
+
+.category-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:35px 20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.card{
+    font-size:45px;
+}
+
+.card h3{
+    margin-top:15px;
+    font-size:22px;
+    color:#333;
+}
+
+/* ==========================
+      Footer
+========================== */
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+}
+
+footer p{
+    font-size:16px;
+}
+
+/* ==========================
+    Responsive Design
+========================== */
+
+@media(max-width:992px){
+
+header{
+    padding:15px 5%;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text{
+    margin-bottom:40px;
+}
+
+.hero-text h1{
+    font-size:42px;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:400px;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-text h1{
+    font-size:34px;
+}
+
+.hero-text p{
+    font-size:16px;
+}
+
+.icons{
+    gap:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+    font-size:24px;
+}
+
+.hero-text h1{
+    font-size:28px;
+}
+
+.hero-text button{
+    width:100%;
+}
+
+.card{
+    padding:25px;
+}
+
+}
+/* Cart Page */
+
+.cart-wrapper{
+
+    display:flex;
+    gap:30px;
+    padding:40px 8%;
+
+}
+
+
+#cart-container{
+
+    flex:2;
+
+}
+
+
+.bill-box{
+
+    flex:1;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+.bill-box p,
+.bill-box h3{
+
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+
+}
+
+
+.checkout-btn{
+
+    width:100%;
+    padding:15px;
+    background:#ff6b00;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
+
+.checkout-btn:hover{
+
+    background:#ff4500;
+
+}
+
+
+@media(max-width:768px){
+
+.cart-wrapper{
+
+    flex-direction:column;
+
+}
+
+}
+/* Login */
+
+.login-section{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#f8f9fa;
+
+}
+
+.login-box{
+
+    width:380px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.login-box h2{
+
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+.login-box input{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+
+}
+
+.login-box button{
+
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#ff6b00;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+
+}
+
+.login-box button:hover{
+
+    background:#ff4500;
+
+}
+
+.login-box p{
+
+    margin-top:20px;
+    text-align:center;
+
+}
+
+.login-box a{
+
+    text-decoration:none;
+    color:#ff6b00;
+
+}
+/* Success Page */
+
+.success-page{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+background:#f4f4f4;
+
+}
+
+.success-box{
+
+width:500px;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.success-box i{
+
+font-size:80px;
+
+color:green;
+
+margin-bottom:20px;
+
+}
+
+.success-box h1{
+
+margin-bottom:20px;
+
+}
+
+.success-box button{
+
+margin-top:25px;
+
+padding:15px 30px;
+
+border:none;
+
+background:#ff6b00;
+
+color:white;
+
+font-size:18px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+}
+
+.success-box button:hover{
+
+background:#ff4500;
+
+}
+
+
+/* Search Box */
+
+.search-box{
+
+    width:100%;
+    text-align:center;
+    margin:30px 0;
+
+}
+
+.search-box input{
+
+    width:350px;
+    max-width:90%;
+    padding:14px 20px;
+    border:2px solid #ff6b00;
+    border-radius:30px;
+    outline:none;
+    font-size:17px;
+
+}
+
+.search-box input:focus{
+
+    box-shadow:0 0 10px rgba(255,107,0,.3);
+
+}
+.search-box{
+    text-align:center;
+    margin:30px 0;
+}
+
+.search-box input{
+
+    width:320px;
+    padding:12px 20px;
+
+    border:2px solid orange;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.search-box input:focus{
+
+    border-color:red;
+
+}
+/* Authentication enhancements */
+
+.auth-subtitle {
+    text-align: center;
+    color: #777;
+    margin: -12px 0 18px;
+    font-size: 14px;
+}
+
+.auth-form input {
+    box-sizing: border-box;
+}
+
+.auth-message {
+    min-height: 20px;
+    margin: 14px 0 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.auth-message.error {
+    color: #d93025;
+}
+
+.auth-message.success {
+    color: #16803c;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        width: calc(100% - 40px);
+        padding: 25px 20px;
+    }
+}
+
+.welcome-user {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #333;
+}
+
+/* ==========================
+   Order History Page
+========================== */
+.orders-container {
+    max-width: 900px;
+    margin: 120px auto 60px;
+    padding: 0 20px;
+}
+
+.orders-container h2 {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.order-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.order-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ff6b00;
+}
+
+.order-date {
+    font-size: 13px;
+    color: #777;
+}
+
+.status-badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-preparing {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-out {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status-delivered {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.order-items-list {
+    margin: 14px 0;
+}
+
+.order-item-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 15px;
+    color: #444;
+}
+
+.order-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 14px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.order-address-summary {
+    font-size: 13px;
+    color: #666;
+    max-width: 60%;
+}
+
+.order-total-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+}
+
+.empty-orders {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.empty-orders i {
+    font-size: 60px;
+    color: #ff6b00;
+    margin-bottom: 20px;
+}
+
+.empty-orders h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.empty-orders p {
+    color: #777;
+    margin-bottom: 25px;
+}

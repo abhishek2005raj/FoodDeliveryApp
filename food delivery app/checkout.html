@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress | Checkout</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            FoodExpress
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+
+        <div class="icons">
+            <span id="welcomeUser" class="welcome-user"></span>
+            <a href="login.html" id="authButton">
+                <button>Login</button>
+            </a>
+        </div>
+    </header>
+
+    <section class="cart-wrapper" style="margin-top: 100px;">
+
+        <!-- Delivery Address Box -->
+        <div class="bill-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h2 style="margin: 0;">Delivery Address 📍</h2>
+                <a href="address.html" style="color: #ff6b00; text-decoration: none; font-size: 14px; font-weight: 600;">Edit</a>
+            </div>
+
+            <p id="show-address" style="line-height: 1.6; color: #444; margin: 0; display: block;">
+                Loading address...
+            </p>
+        </div>
+
+        <!-- Order Summary & Payment Box -->
+        <div class="bill-box">
+            <h2>Order Summary 📋</h2>
+
+            <div id="checkout-items" style="max-height: 250px; overflow-y: auto; margin-bottom: 15px;">
+                <!-- Dynamically rendered cart items -->
+            </div>
+
+            <hr>
+
+            <p>
+                Sub Total
+                <span id="checkout-subtotal">₹0</span>
+            </p>
+
+            <p>
+                GST (5%)
+                <span id="checkout-gst">₹0</span>
+            </p>
+
+            <p>
+                Delivery Charge
+                <span>₹40</span>
+            </p>
+
+            <hr>
+
+            <h2>
+                Total Amount
+                <span id="checkout-total">₹0</span>
+            </h2>
+
+            <hr>
+
+            <h3 style="margin-top: 20px;">Payment Method 💳</h3>
+
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; margin: 10px 0;">
+                <input type="radio" name="payment" value="Cash On Delivery" checked>
+                <span>💵 Cash On Delivery</span>
+            </label>
+
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; margin: 10px 0;">
+                <input type="radio" name="payment" value="UPI">
+                <span>📱 UPI (Google Pay, PhonePe, Paytm)</span>
+            </label>
+
+            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; margin: 10px 0;">
+                <input type="radio" name="payment" value="Credit / Debit Card">
+                <span>💳 Credit / Debit Card</span>
+            </label>
+
+            <div id="checkout-error" style="color: #d93025; margin: 12px 0; font-size: 14px; text-align: center; display: none;"></div>
+
+            <button id="placeOrder" class="checkout-btn" style="margin-top: 15px;">
+                Place Order
+            </button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 FoodExpress | Designed by Abhishek Raj</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="checkout.js"></script>
+    <script src="auth-ui.js"></script>
+
+</body>
+
+</html>

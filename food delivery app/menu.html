@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress | Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            FoodExpress
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="#">Offers</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </a>
+
+            <span id="welcomeUser" class="welcome-user"></span>
+            <a href="login.html" id="authButton">
+                <button>Login</button>
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Menu -->
+    <section class="categories" style="margin-top:100px;">
+
+        <h2>Our Delicious Menu</h2>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchFood"
+                placeholder="🔍 Search your favourite food...">
+        </div>
+
+        <p id="no-result" style="display:none;color:red;font-size:18px;">
+            ❌ Food Not Found
+        </p>
+
+        <!-- Dynamic Food Items Container -->
+        <div class="category-container" id="menu-container">
+            <!-- Loading indicator before items are fetched from MongoDB Atlas -->
+            <p id="menu-loading" style="grid-column: 1/-1; text-align: center; font-size: 18px; color: #666;">
+                ⏳ Loading delicious food items from database...
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 FoodExpress | Designed by Abhishek Raj</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="menu.js"></script>
+    <script src="search.js"></script>
+    <script src="auth-ui.js"></script>
+
+</body>
+
+</html>

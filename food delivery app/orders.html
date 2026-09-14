@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress | My Orders</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            FoodExpress
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart</a>
+            <a href="orders.html" style="color: #ff6b00; font-weight: 700;">Orders</a>
+        </nav>
+
+        <div class="icons">
+            <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+
+            <span id="welcomeUser" class="welcome-user"></span>
+            <a href="login.html" id="authButton">
+                <button>Login</button>
+            </a>
+        </div>
+    </header>
+
+    <main class="orders-container">
+        <h2>My Order History 📋</h2>
+
+        <div id="orders-list">
+            <p style="text-align: center; font-size: 18px; color: #777;">
+                ⏳ Loading your past orders...
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 FoodExpress | Designed by Abhishek Raj</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="orders.js"></script>
+    <script src="auth-ui.js"></script>
+
+</body>
+
+</html>

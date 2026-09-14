@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress | Order Successful</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <section class="success-page">
+        <div class="success-box">
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h1>Order Placed Successfully 🎉</h1>
+
+            <p>Thank you for ordering from FoodExpress!</p>
+
+            <h3>
+                Order ID : <span id="order-id" style="color: #ff6b00;">Loading...</span>
+            </h3>
+
+            <p>
+                Date :
+                <span id="order-date"></span>
+            </p>
+
+            <p>
+                Time :
+                <span id="order-time"></span>
+            </p>
+
+            <p>
+                Estimated Delivery :
+                <span id="delivery-time" style="font-weight: 600; color: #28a745;">30 - 40 Minutes</span>
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                <button id="viewOrdersBtn" style="background: #222; margin-top: 0;">
+                    📋 View My Orders
+                </button>
+                <button id="continueShopping" style="margin-top: 0;">
+                    🍕 Order More Food
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="config.js"></script>
+    <script src="success.js"></script>
+
+</body>
+
+</html>
