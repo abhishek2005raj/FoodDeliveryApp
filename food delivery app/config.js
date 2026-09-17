@@ -3,13 +3,9 @@
 // ==========================================
 
 /**
- * Automatically sets the API URL:
- * - Uses localhost if running locally via Live Server or development tools
- * - Uses the live production Render URL when deployed live
+ * Automatically sets the API URL globally across the browser window context
  */
-const API_BASE_URL =
+window.API_BASE_URL =
   window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
     ? "http://localhost:5000/api"
     : "https://onrender.com";
-
-export default API_BASE_URL;
