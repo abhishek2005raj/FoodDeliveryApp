@@ -3,9 +3,11 @@
 // Connects to Express + MongoDB Atlas Orders API
 // ==========================================
 
-const baseUrl = typeof API_BASE_URL !== "undefined"
-  ? API_BASE_URL
-  : (window.location.port === "5000" ? "/api" : "http://localhost:5000/api");
+// Fallback API_BASE_URL if config.js is not loaded
+const baseUrl = typeof window.API_BASE_URL !== "undefined"
+  ? window.API_BASE_URL
+  : "https://onrender.com";
+
 
 const token = localStorage.getItem("token");
 const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
