@@ -10,7 +10,7 @@ const authMessage = document.getElementById("authMessage");
 // Fallback API_BASE_URL if config.js is not loaded
 const baseUrl = typeof window.API_BASE_URL !== "undefined"
   ? window.API_BASE_URL
-  : "https://onrender.com";
+  : "https://fooddeliveryapp-webg.onrender.com/api";
 
 
 // Helper to show inline status messages
