@@ -8,9 +8,10 @@ const signupForm = document.getElementById("signupForm");
 const authMessage = document.getElementById("authMessage");
 
 // Fallback API_BASE_URL if config.js is not loaded
-const baseUrl = typeof API_BASE_URL !== "undefined"
-  ? API_BASE_URL
-  : (window.location.port === "5000" ? "/api" : "http://localhost:5000/api");
+const baseUrl = typeof window.API_BASE_URL !== "undefined"
+  ? window.API_BASE_URL
+  : "https://onrender.com";
+
 
 // Helper to show inline status messages
 function showMessage(message, success = false) {
